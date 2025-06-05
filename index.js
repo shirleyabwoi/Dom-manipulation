@@ -29,11 +29,12 @@ title.appendChild(img);
 
 
 productText.style.fontSize='30px'
+productText.style.textAlign='center'
 
 
 fruList.style.display='flex'
 fruList.style.listStyleType='none'
-fruList.style.gap="100px"
+fruList.style.gap="250px"
 fruList.style.padding='40px'
 fruList.style.justifyContent='center'
 
@@ -44,15 +45,12 @@ fruitItems.forEach(fruit=>{
     fruit.style.padding='20px'
     fruit.style.borderRadius='50px'
     fruit.style.width='90px'
-    fruit.style.cursor='pointer'
 
 })
 
-
-
 vegList.style.display='flex'
 vegList.style.listStyleType='none'
-vegList.style.gap="100px"
+vegList.style.gap="250px"
 vegList.style.padding='40px'
 vegList.style.justifyContent='center'
 
@@ -64,19 +62,23 @@ vegetableItems.forEach(vegetable=>{
     vegetable.style.padding='20px'
     vegetable.style.borderRadius='50px'
     vegetable.style.width='90px'
-    vegetable.style.cursor='pointer'
 
 });
 const hr=document.createElement('hr');
 vegList.parentNode.insertBefore(hr,vegList.nextSibling);
 
 hr.style.width='100%';
-hr.style.border='2px solid black';
+hr.style.border='2px solid green';
 hr.style.margin='10px 0';
 
 
+const fruitPictures=document.getElementById('fruitPictures');
+fruitPictures.style.justifySelf='center'
+fruitPictures.style.display='flex'
+fruitPictures.style.gap='70px'
 
 
-
-
-
+const vegetabletPictures=document.getElementById('vegetablePictures');
+vegetablePictures.style.justifySelf='center'
+vegetablePictures.style.display='flex'
+vegetablePictures.style.gap='70px'

@@ -1,7 +1,8 @@
 document.body.style.backgroundColor = "silver";
 const title=document.getElementById('title');
 title.style.color='green'
-title.style.fontSize='30px'
+title.style.fontSize='70px'
+title.style.textAlign='center'
 
 const fruList=document.getElementById('fruList');
 const newFruit=document.createElement('li');
@@ -13,28 +14,69 @@ const newVegetable=document.createElement('li');
 vegList.appendChild(newVegetable);
 newVegetable.textContent='Cabbage';
 
-// document.h3.style.backgroundColor = "yellow";
 const titles=document.querySelectorAll("h3")
 titles.forEach(h3 => {
     h3.style.textTransform="uppercase"
-    h3.style.color="blue"
+    h3.style.color="green"
+    h3.style.fontSize='30px'
 });
 
+const text=document.getElementById('productText');
+const img=document.createElement('img');
+img.src='https://www.weliahealth.org/wp-content/uploads/2021/03/fruitsveggies-1620x600-1.jpg';
+
+title.appendChild(img);
+
+
+productText.style.fontSize='30px'
+
+
+fruList.style.display='flex'
+fruList.style.listStyleType='none'
+fruList.style.gap="100px"
+fruList.style.padding='40px'
+fruList.style.justifyContent='center'
+
+const fruitItems=fruList.querySelectorAll('li')
+fruitItems.forEach(fruit=>{
+    fruit.style.backgroundColor='white'
+    fruit.style.border='2px green solid'
+    fruit.style.padding='20px'
+    fruit.style.borderRadius='50px'
+    fruit.style.width='90px'
+    fruit.style.cursor='pointer'
+
+})
+
+
+
+vegList.style.display='flex'
+vegList.style.listStyleType='none'
+vegList.style.gap="100px"
+vegList.style.padding='40px'
+vegList.style.justifyContent='center'
+
+
+const vegetableItems=vegList.querySelectorAll('li')
+vegetableItems.forEach(vegetable=>{
+    vegetable.style.backgroundColor='white'
+    vegetable.style.border='2px green solid'
+    vegetable.style.padding='20px'
+    vegetable.style.borderRadius='50px'
+    vegetable.style.width='90px'
+    vegetable.style.cursor='pointer'
+
+});
+const hr=document.createElement('hr');
+vegList.parentNode.insertBefore(hr,vegList.nextSibling);
+
+hr.style.width='100%';
+hr.style.border='2px solid black';
+hr.style.margin='10px 0';
 
 
 
 
-const fruits={
-    mangoes:"https://www.pittmandavis.com/images/xl/PD24-FloridaMangoes.webp?v=1",
-    bananas:"https://iwantveggies.com/cdn/shop/files/banana-1kg-198277_46de6c96-deb9-4ccd-8ff3-03c43e932f07.jpg?v=1686150953",
-    watermelon:"https://i5.walmartimages.com/asr/c47d20aa-13d0-4994-964d-8f56d01fc9d5.a535127f6a2882a7ac37b8be7dffad36.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF",
-    oranges:"https://www.allrecipes.com/thmb/y_uvjwXWAuD6T0RxaS19jFvZyFU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1205638014-2000-d0fbf9170f2d43eeb046f56eec65319c.jpg"
 
-}
 
-const vegetables={
-    Onions:"https://blog.plantwise.org/wp-content/uploads/sites/7/2023/02/wide-paul-magdas-SSIwIRCu7bM-unsplash-scaled.jpg",
-    Tomatoes:"https://www.tastingtable.com/img/gallery/the-simple-tape-hack-that-keeps-tomatoes-fresh-and-juicy/intro-1691749924.jpg",
-    Kales:"https://i.pinimg.com/736x/f8/f1/e7/f8f1e78c756240f618aa384f802559ac.jpg",
-    Cabbage:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxI5B1tXkSMLE1EWKAorLEDfyZAdV02nF5bA&s"
-}
+
